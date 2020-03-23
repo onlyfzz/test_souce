@@ -7,6 +7,15 @@
   <title>Document</title>
 </head>
 <body>
-  <div>测试2</div>
+  <div id="test">测试2</div>
+  <script>
+    var test = document.getElementById('test')
+    test.onclick = function() {
+      var func = function() {
+        console.log(this)
+      }
+      func.call(this)
+    }
+  </script>
 </body>
 </html>
